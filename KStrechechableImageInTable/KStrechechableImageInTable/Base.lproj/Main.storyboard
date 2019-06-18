@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KStrechechableImageInTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GT1-UE-qmW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" rowHeight="92" id="xho-S5-PBY" customClass="TableCell" customModule="KStrechechableImageInTable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xho-S5-PBY" id="iRz-Io-fTO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pink" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-hj-f6i">
+                                                    <rect key="frame" x="10" y="10" width="355" height="71.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ8-8o-XI8">
+                                                    <rect key="frame" x="25" y="25" width="315" height="36.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QJ8-8o-XI8" firstAttribute="trailing" secondItem="hfl-hj-f6i" secondAttribute="trailing" constant="-25" id="0VI-RY-WNB"/>
+                                                <constraint firstItem="QJ8-8o-XI8" firstAttribute="bottom" secondItem="hfl-hj-f6i" secondAttribute="bottom" constant="-20" id="19c-C4-RW4"/>
+                                                <constraint firstItem="QJ8-8o-XI8" firstAttribute="leading" secondItem="hfl-hj-f6i" secondAttribute="leading" constant="15" id="L3c-bG-Kxw"/>
+                                                <constraint firstAttribute="trailing" secondItem="hfl-hj-f6i" secondAttribute="trailing" constant="10" id="RrK-bj-Lyg"/>
+                                                <constraint firstAttribute="bottom" secondItem="hfl-hj-f6i" secondAttribute="bottom" constant="10" id="W4v-7d-1Ti"/>
+                                                <constraint firstItem="QJ8-8o-XI8" firstAttribute="top" secondItem="hfl-hj-f6i" secondAttribute="top" constant="15" id="Wt5-8W-Oyf"/>
+                                                <constraint firstItem="hfl-hj-f6i" firstAttribute="top" secondItem="iRz-Io-fTO" secondAttribute="top" constant="10" id="eiy-7e-XR3"/>
+                                                <constraint firstItem="hfl-hj-f6i" firstAttribute="leading" secondItem="iRz-Io-fTO" secondAttribute="leading" constant="10" id="krl-8i-xfH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewContainer" destination="hfl-hj-f6i" id="1QW-ve-IAR"/>
+                                            <outlet property="label" destination="QJ8-8o-XI8" id="CmD-HR-q19"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="G8v-Ry-7m7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GT1-UE-qmW" secondAttribute="bottom" id="7Lr-ih-wOp"/>
+                            <constraint firstItem="GT1-UE-qmW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Aci-ub-XmA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GT1-UE-qmW" secondAttribute="trailing" id="RmT-fj-dfA"/>
+                            <constraint firstItem="GT1-UE-qmW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rvb-Rq-yfR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="GT1-UE-qmW" id="CA2-rW-w0Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pink" width="271" height="68"/>
+    </resources>
+</document>
